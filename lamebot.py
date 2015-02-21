@@ -1,6 +1,6 @@
 #!/usr/bin/python2
-import sys, socket, string, lastfm, random_imgur, eightball, decide, distro, uwot, jimmies
-
+import sys, socket, string
+from modules import lastfm, random_imgur, eightball, decide, distro, uwot,          jimmies
 HOST="irc.rizon.net"
 PORT=6667
 NICK="lamebot"

@@ -72,7 +72,7 @@ while 1:
                         s.send("PRIVMSG %s :%s\r\n" % (line[2], distro.returndistro(line[4:])))
     
                     #u wot m8?
-                    if(line[3].lower()==":.uwotm8"):
+                    if("m8" in line[3:]):
                         s.send("PRIVMSG %s :%s\r\n" % (line[2], uwot.m8()))
 
                     #Are your jimmies rustled?

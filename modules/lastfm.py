@@ -18,7 +18,7 @@ def np(user):
         album = userInfo["recenttracks"]['track'][0]['album']['#text']
         track = userInfo["recenttracks"]['track'][0]['name']
         outt = user + " is now listening to " + track + " - " + artist + " on " + album
-        outt = outt[:80]
+        outt = outt
     except KeyError:
         outt = "no user found"
     return outt

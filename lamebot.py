@@ -76,7 +76,7 @@ while 1:
                         s.send("PRIVMSG %s :%s\r\n" % (line[2], uwot.m8()))
 
                     #Are your jimmies rustled?
-                    if(line[3].lower()==".rustle"):
+                    if(line[3].lower()==":.rustle"):
                         s.send("PRIVMSG %s :%s\r\n" % (line[2], jimmies.rustle()))
 
         except IndexError:

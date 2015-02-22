@@ -18,7 +18,7 @@ def np(user):
         album = userInfo["recenttracks"]['track'][0]['album']['#text']
         track = userInfo["recenttracks"]['track'][0]['name']
         outt = user + " is now listening to " + track + " - " + artist + " on " + album
-        outt = outt
+        outt = "\x034%s is now listening to \x0312%s \x032by %s \0x310on %s" % (user, track, artist, album)
     except KeyError:
         outt = "no user found"
     return outt

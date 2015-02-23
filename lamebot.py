@@ -80,7 +80,7 @@ while 1:
                         s.send("PRIVMSG %s :%s\r\n" % (line[2], jimmies.rustle()))
                     
                     if(line[3].lower()==":.wiki"):
-                        s.send("PRIVMSG %s :%s\r\n" % (line[2], wikipedia.returnurl(string.join(line[4:]))))
+                        s.send("PRIVMSG %s :%s\r\n" % (line[2], wikipedia.returnurl(string.join(line[4:], "_"))))
 
         except IndexError:
             pass

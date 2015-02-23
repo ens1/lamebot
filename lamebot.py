@@ -1,6 +1,6 @@
 #!/usr/bin/python2
 import sys, socket, string
-from modules import lastfm, random_imgur, eightball, decide, distro, uwot,          jimmies
+from modules import lastfm, random_imgur, eightball, decide, distro, uwot,          jimmies, wikipedia
 HOST="irc.rizon.net"
 PORT=6667
 NICK="lamebot"
@@ -78,6 +78,9 @@ while 1:
                     #Are your jimmies rustled?
                     if(line[3].lower()==":.rustle"):
                         s.send("PRIVMSG %s :%s\r\n" % (line[2], jimmies.rustle()))
+                    
+                    if(line[3].lower()==":.wiki"):
+                        s.send("PRIVMSG %s :%s\r\n" % (line[2], wikipedia.returnurl(string.join(line[4:]))))
 
         except IndexError:
             pass

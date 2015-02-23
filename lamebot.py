@@ -81,7 +81,7 @@ while 1:
                     
                     if(line[3].lower()==":.wiki"):
                         if(line[4].lower()=="random"):
-                            s.send("PRIVMSG %s :%s\r\n" % (line[2], wikipedia.random()))
+                            s.send("PRIVMSG %s :%s\r\n" % (line[2], wikipedia.randompage()))
                         else:
                             s.send("PRIVMSG %s :%s\r\n" % (line[2], wikipedia.returnurl(string.join(line[4:], "_"))))
 
